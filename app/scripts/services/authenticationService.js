@@ -76,7 +76,7 @@ angular.module('voteApp').factory("AuthenticationService", function($http, $q, $
 });
 
 angular.module('voteApp').factory('User', function($resource, $rootScope) {
-  return $resource('http://sat-idea-voter.herokuapp.com/api/v1/signup', 
+  return $resource('https://sat-idea-voter.herokuapp.com/api/v1/signup', 
     {username:'@username', password:'@password', password_confirmation:'@password_confirmation'});
 });
 

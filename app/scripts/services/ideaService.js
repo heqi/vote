@@ -1,27 +1,27 @@
 'use strict';
 
 angular.module('voteApp').factory('Idea', function($resource, $rootScope) {
-  return $resource('http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id', {token:'@token'},
+  return $resource('https://sat-idea-voter.herokuapp.com/api/v1/ideas/:id', {token:'@token'},
   {
     update:{
       method: "put",
       params: {token:'@token', id:'@id'},
-      url: 'http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id'
+      url: 'https://sat-idea-voter.herokuapp.com/api/v1/ideas/:id'
     },
     delete:{
       method: "delete",
       params: {token:'@token', id:'@id'},
-      url: 'http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id'
+      url: 'https://sat-idea-voter.herokuapp.com/api/v1/ideas/:id'
     },
   	up:{
   		method: "POST",
   		params: {token:'@token', id:'@id'},
-  		url: 'http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id/up'
+  		url: 'https://sat-idea-voter.herokuapp.com/api/v1/ideas/:id/up'
   	},
   	down:{
   		method: "POST",
   		params: {token:'@token', id:'@id'},
-  		url: 'http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id/down'
+  		url: 'https://sat-idea-voter.herokuapp.com/api/v1/ideas/:id/down'
   	}
   }); // Note the full endpoint address
 });
