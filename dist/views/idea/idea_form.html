@@ -1,0 +1,9 @@
+<div class="form-group"> <label for="title">Title:</label> <input type="text" name="title" id="title" class="form-control" ng-model="idea.title" required> </div> <div class="form-group"> <label for="content">Content:</label> <textarea name="content" id="content" class="form-control" ng-model="idea.content" required>
+</div>
+
+<input type="hidden" name="user_id" id="user_id" class="form-control" ng-model="idea.user_id" required>
+
+<div name="errorMessage" class="alert alert-danger" role="alert" ng-hide="false">{{ errorMessage }}</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<br>
+<br>

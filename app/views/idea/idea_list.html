@@ -1,0 +1,16 @@
+<div ng-controller="ideaListCtrl" ng-if="true">
+  <h1>Idea</h1>
+  <ul class="list-group">
+      <li class="list-group-item" ng-repeat="idea in ideas">
+        <div>
+          <h2><a ng-href="#/ideas/{{idea.id}}/view">{{idea.title}}</a></h2>
+          <span>by {{idea.creator.username}}</span>
+          <br>
+          <p>score:{{idea.score}}</p>
+          <button class="btn btn-info" ng-click="up(idea)">Up</button>
+          <button class="btn btn-info" ng-click="down(idea)" >Down</button>
+          <p>{{idea.content}}</p>
+        </div>
+      </li>
+  </ul>
+</div>

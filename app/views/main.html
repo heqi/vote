@@ -1,0 +1,11 @@
+
+<div class="jumbotron" ng-if="!main.isLogged()">
+  <p class="lead">
+    Submit a new idea.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/ideas/new">Start<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div ng-include="'views/idea/idea_list.html'" ></div>
+
+
